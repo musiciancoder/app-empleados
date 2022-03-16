@@ -13,5 +13,16 @@ export class AppComponent {
     new Empleado("Ana","Matrin","Directora",4500),
     new Empleado("María","Fernandez","Jefa seccio",4500),
     new Empleado("Laura","Lopez","Secretaria",2500)
-  ]
+  ];
+
+  //Lo queescribimos en el cuadro de texto se agrega al array
+  agregarEmpleado(){ 
+    let miEmpleado = new Empleado(this.cuadroNombre,this.cuadroApellido,this.cuadroCargo, this.cuadroSalario);
+    this.empleados.push(miEmpleado);
+  }
+
+  cuadroNombre:string="";
+  cuadroApellido:string="";
+  cuadroCargo:string="";
+  cuadroSalario:number=0;
 }
